@@ -1,6 +1,6 @@
 ID,Nombre,Apellido,Email,Teléfono,Pais
 1,Juan,Pérez,juan.perez@email.com,1234567890,Argentina
-2,María,Gómez,,0987654321,NULL
+2,María,Gómez,"Desconocido",0987654321,NULL
 3,Carlos,Ramírez,carlos.ramirez@email.com,,México
 4,Laura,,laura@email.com,1122334455,Perú
 5,Jorge,López,jorge.lopez@email.com,2233445566,
