@@ -2,8 +2,6 @@
 # Sistema de gestión de inventario y compras para librería "Libros & Bytes"
 #===============================================================================
 
-# Sistema de gestión de inventario y compras para librería "Libros & Bytes"
-
 # Lista de libros: cada libro es un diccionario con título, autor, precio y stock
 libros = [
     {'titulo': 'Dracula', 'autor': 'Bram Stoker', 'precio': 42990, 'stock': 21},
