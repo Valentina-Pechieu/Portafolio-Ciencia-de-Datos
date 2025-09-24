@@ -44,3 +44,13 @@ Cada código aborda técnicas de análisis, visualización y modelado de datos e
 
 Este portafolio demuestra la aplicación práctica de técnicas de **análisis de datos, estadística, machine learning y big data**, integrando herramientas del ecosistema Python y Spark para resolver problemas de distintas áreas: comercio, migración, deportes, educación, música y demografía.
 
+## 📚 Referencias y Fuentes
+
+- Todos los datasets utilizados fueron provistos en las **evaluaciones finales del curso de Ciencia de Datos**.  
+- Los datasets son de carácter **educativo/sintético** y fueron diseñados para practicar técnicas de análisis, estadística, machine learning y big data.
+- Documentación oficial utilizada como referencia:
+  - [Pandas](https://pandas.pydata.org/)  
+  - [NumPy](https://numpy.org/)  
+  - [Scikit-learn](https://scikit-learn.org/stable/)  
+  - [TensorFlow/Keras](https://www.tensorflow.org/)  
+  - [Apache Spark](https://spark.apache.org/docs/latest/)  
