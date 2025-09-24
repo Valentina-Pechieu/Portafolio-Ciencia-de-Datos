@@ -1,7 +1,6 @@
 #====================================================================
 # Análisis del impacto del cambio climático en la agricultura
 #====================================================================
-
 import pandas as pd
 import seaborn as sns
 import numpy as np
@@ -236,11 +235,11 @@ df_metricas_clf = pd.DataFrame(metricas_clf).set_index('Modelo_Clasificacion')
 print('\n--- Resultados de Clasificación ---')
 print(df_metricas_clf)
 
-# Conclusiones
+# Conclusiones 
 best_reg = df_metricas_reg['R2'].idxmax()
 best_clf = df_metricas_clf['F1'].idxmax()
 
-print('\n--- CONCLUSIONES ---')
+print('\n--- CONCLUSION ---')
 print(f'El mejor modelo de Regresión fue "{best_reg}" con R2 = {df_metricas_reg.loc[best_reg,"R2"]:.3f}.')
 print(f'El mejor modelo de Clasificación fue "{best_clf}" con F1 = {df_metricas_clf.loc[best_clf,"F1"]:.3f}.')
 print('Estos resultados muestran un equilibrio adecuado entre precisión y recall para predecir impacto climático.')

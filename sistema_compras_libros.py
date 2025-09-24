@@ -18,11 +18,11 @@ descuentos = {
     'descuento': [12, 0, 5, 15, 5, 10]
 }
 
-# Listas auxiliares para manejar libros en el sistema
+# Listas auxiliares para manejar el inventario y las compras
 libros_disponibles = []  # Libros con stock suficiente
-libros_comprados = []    # Libros comprados por el usuario
+libros_comprados = []    # Libros adquiridos por el usuario
 
-# Función para mostrar libros con más de 1 unidad en stock
+# Función para mostrar libros con más de una unidad en stock
 def mostrar_libros_disponibles(lista):
     libros_disponibles.clear()
     for libro in lista:
@@ -30,25 +30,25 @@ def mostrar_libros_disponibles(lista):
             libros_disponibles.append(libro)
             print(f'Título: {libro["titulo"]} | Autor: {libro["autor"]} | Precio: ${libro["precio"]:,} CLP | Stock: {libro["stock"]}')
 
-# Función para simular la compra de libros
+# Función para procesar la compra de libros
 def comprar_libros(titulo, cantidad):
     i = 0
     for libro in libros_disponibles:
         if titulo == libro['titulo'].lower():
-            # Buscar el descuento por autor
+            # Identificación del descuento según el autor
             index = descuentos['autor'].index(libro['autor'])
             descuento = descuentos['descuento'][index]
             
-            # Validar stock suficiente
+            # Validación de stock
             if cantidad <= libro['stock']:
-                # Calcular precio con descuento aplicado
+                # Cálculo del precio con descuento aplicado
                 total_con_descuento = libro['precio'] * (1 - descuento / 100)
                 pago = cantidad * total_con_descuento
 
-                # Reducir stock disponible
+                # Actualización de stock
                 libro['stock'] -= cantidad
 
-                # Guardar detalle de la compra
+                # Registro del detalle de la compra
                 detalle_libro = {
                     'titulo': libro['titulo'],
                     'cantidad': cantidad,
@@ -57,7 +57,7 @@ def comprar_libros(titulo, cantidad):
                 }
                 libros_comprados.append(detalle_libro)
 
-                # --- Mensajes corregidos estilo CLP ---
+                # Mensajes de confirmación
                 print(f'Descuento aplicado: {descuento:.1f}%')
                 print(f'Compra exitosa: {cantidad} x {libro["titulo"]} - Total: ${pago:,.0f} CLP')
             else:
@@ -67,7 +67,7 @@ def comprar_libros(titulo, cantidad):
     if i == 0:
         print('El libro ingresado no se encuentra disponible.')
 
-# Inicializamos libros disponibles al inicio
+# Inicialización de libros disponibles
 mostrar_libros_disponibles(libros)
 
 # Menú principal del sistema
@@ -87,7 +87,7 @@ while True:
                 mostrar_libros_disponibles(libros)
 
             case 2:
-                # Filtrado de libros por rango de precios usando if/elif/else
+                # Filtro de libros por rango de precios
                 while True:
                     minimo = float(input('Ingrese el precio mínimo: '))
                     maximo = float(input('Ingrese el precio máximo: '))
@@ -121,13 +121,13 @@ while True:
                         print('Opción no válida. Responda con "y" para sí o "n" para no.')
 
             case 4:
-                # Generar factura final con total pagado y ahorro
+                # Generación de factura final con detalle de compra y ahorro
                 print('\n--- Factura de Compra ---')
                 pago_total = 0
                 ahorro_total = 0
                 
                 for libro in libros_comprados:
-                    # Precio original sin descuento
+                    # Cálculo del precio original y del ahorro obtenido
                     precio_original = next(l['precio'] for l in libros if l['titulo'] == libro['titulo'])
                     subtotal = libro['cantidad'] * precio_original
                     ahorro = subtotal - libro['pago']
@@ -143,3 +143,4 @@ while True:
 
     except ValueError:
         print('Error: ingrese un valor numérico válido.')
+
