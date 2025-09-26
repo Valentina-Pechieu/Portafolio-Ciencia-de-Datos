@@ -1,3 +1,8 @@
+# 📂 Portafolio Ciencia de Datos
+
+Este repositorio contiene los proyectos desarrollados como parte de la **Evaluación Final de los Módulos de Ciencia de Datos**.  
+Cada carpeta/código corresponde a un módulo distinto y aborda técnicas de análisis, visualización y modelado de datos en Python o PySpark.
+
 ## 📌 Contenido
 
 - **Sistema de compras en librería**  
