@@ -46,7 +46,7 @@ Este portafolio demuestra la aplicación práctica de técnicas de **análisis d
 
 ## 📚 Referencias y Fuentes
 
-- Todos los datasets utilizados fueron provistos en las **evaluaciones finales del curso de Ciencia de Datos**.  
+- Todos los datasets utilizados fueron provistos en las **evaluaciones finales del curso de Ciencia de Datos de Talento Digital**.  
 - Los datasets son de carácter **educativo** y fueron diseñados para practicar técnicas de análisis, estadística, machine learning y big data.
 - Documentación oficial utilizada como referencia:
   - [Pandas](https://pandas.pydata.org/)  
